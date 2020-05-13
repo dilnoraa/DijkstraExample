@@ -6,7 +6,6 @@ void Distance(int[][5],int []);
 int main()
 {
 
-
     int N = 5;
     int i,j;
 
@@ -21,8 +20,6 @@ int main()
     };
 
 
-
-
     for(i=0; i<5; i++)
     {
         for(j=0; j<5; j++)
@@ -30,9 +27,7 @@ int main()
         printf("\n");
     }
 
-
     int distances[N];
-
     Distance(cost, distances);
     printf("\n En kisa yolu Dikstra algoritmasi ile:\n");
     for ( i=0; i<N; ++i)
@@ -44,8 +39,6 @@ void Distance( int cost [5][5], int D[5])
 
     int w, v, min,i;
     int infinity=1000;
-
-
     int visited[5];
 
     D[0] = 0;
@@ -73,9 +66,5 @@ void Distance( int cost [5][5], int D[5])
                 if(min+cost[v][w] < D[w])
                     D[w] = min + cost[v][w];
     }
-
 }
-
-
-
 
